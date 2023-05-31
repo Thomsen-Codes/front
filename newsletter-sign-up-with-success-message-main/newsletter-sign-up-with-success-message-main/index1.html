@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index1.css" class="css" />
+    <title>Thanks</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="thanks">
+        <div></div>
+        <img src="assets/images/icon-success.svg" alt="" class="icons" />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to $your email$. Please open and
+          click the button inside to confirm your subscription.
+        </p>
+        <form class="button">
+          <input type="submit" value="Dismiss message" id="dismissBtn" />
+        </form>
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("dismissBtn")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
