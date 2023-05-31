@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newsletter Sign-up</title>
+    <link rel="stylesheet" href="index.css" class="css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">
+        <h1>Stay Updated!</h1>
+        <p>Join over 60,000+ product managers receiving monthly updates on</p>
+        <ol class="custom-list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ol>
+        <form class="signup-form" id="signupForm">
+          <h3>Email Address</h3>
+          <input
+            type="email"
+            name="email"
+            placeholder="email@company.com" required id='emailInput'
+            required
+          />
+          <input type="submit" value="Subscribe to monthly newsletter"/>
+        </form>
+      </div>
+      <div class="image">
+        <img
+          class="desktop-image"
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt="Newsletter Image"
+        />
+        <img
+          class="mobile"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+        />
+      </div>
+      <script>
+      document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var emailInput = document.getElementById('emailInput');
+        var email = emailInput.value.trim();
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          window.location.href = 'index1.html';
+          return true; // Allow form submission
+        } else {
+          // Display an error message or perform any other action for an invalid email format
+          return false; // Prevent form submission
+        }
+      });
+      </script>
+  </body>
+
